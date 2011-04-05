@@ -1,0 +1,23 @@
+.center { text-align: center;}
+.powertable {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.powertable td, .powertable th {
+  border: 1px solid #98bf21;
+  padding: 3px 7px 2px 7px;
+}
+
+.powertable td.error {
+  background-color: #FA5858;
+}
+
+.powertable th {
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  background-color: #A7C942;
+  color: #ffffff;
+}
