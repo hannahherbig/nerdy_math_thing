@@ -33,4 +33,7 @@ get '/left/:ex/:ey' do |ex, ey|
   erb_nbl :powertableleft
 end
 
-get('/') { erb_nbl :index }
+get '/' do
+  @title = "Nerdy math stuff."
+  erb_nbl :index
+end
