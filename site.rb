@@ -21,4 +21,4 @@ get '/:ex/:ey' do |ex, ey|
   erb_nbl :powertable
 end
 
-get '/' { erb_nbl :index }
+get('/') { erb_nbl :index }
