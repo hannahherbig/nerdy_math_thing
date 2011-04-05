@@ -6,6 +6,7 @@
 }
 
 .powertable td, .powertable th {
+  text-align: right;
   border: 1px solid #98bf21;
   padding: 3px 7px 2px 7px;
 }
@@ -15,7 +16,6 @@
 }
 
 .powertable th {
-  text-align: left;
   padding-top: 5px;
   padding-bottom: 4px;
   background-color: #A7C942;
