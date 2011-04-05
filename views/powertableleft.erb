@@ -1,0 +1,22 @@
+<table class="powertable">
+  <% (@sy..@ey).each do |y| %>
+  <tr>
+    <th>x<sup><%= y %></sup></th>
+    <% (@sx..@ex).each do |x| %>
+    <%
+    begin
+      result = x ** y
+      if result.class == Rational
+        result = result.to_f
+      end
+      error = false
+    rescue => e
+      error = true
+      result = e.to_s
+    end
+    %>
+    <td<% if error %> class='error'<% end %>><%= result %></td>
+    <% end %>
+  </tr>
+  <% end %>
+</table>
