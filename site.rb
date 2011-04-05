@@ -21,4 +21,16 @@ get '/:ex/:ey' do |ex, ey|
   erb_nbl :powertable
 end
 
+get '/left/:sx/:ex/:sy/:ey' do |sx, ex, sy, ey|
+  @sx, @ex, @sy, @ey = sx.to_i, ex.to_i, sy.to_i, ey.to_i
+  @title = "Table of powers (#{@sx} <= x <= #{@ex}; #{@sy} <= y <= #{@ey})"
+  erb_nbl :powertableleft
+end
+
+get '/left/:ex/:ey' do |ex, ey|
+  @sx, @ex, @sy, @ey = 1, ex.to_i, 1, ey.to_i
+  @title = "Table of powers (#{@sx} <= x <= #{@ex}; #{@sy} <= y <= #{@ey})"
+  erb_nbl :powertableleft
+end
+
 get('/') { erb_nbl :index }
